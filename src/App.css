@@ -1,0 +1,290 @@
+#root {
+  --main-color: #c57ff3;
+  --main-color-shadow: #7b4e9899;
+  background-color: #1A1A12;
+}
+
+* {
+  color: white;
+}
+
+body{
+  background-color: #1A1A12 !important;
+}
+
+section {
+padding-top: 20px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+} 
+
+section h2 {
+  padding-top: 1%;
+}
+
+main {
+  min-height: calc(100vh - 147.583px); /* This ensures that the footer is at the bottom of the page despite if there isn't much content in main which would naturally push the footer to the bottom*/
+}
+
+/* -----------------------------------Header/Nav Bar------------------------------------------------------ */
+
+.customNav {
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  top: 0;
+  background-color:  var(--main-color) !important;
+  z-index: 1;
+  color: var(--bs-navbar-color);
+}
+
+.customNav > div {
+  background-color:  var(--main-color) !important;
+
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+}
+
+.navbar-collapse  {
+  background-color:  var(--main-color) !important;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  border-bottom: 1px solid #1A1A12;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: white !important;
+  border-color: white;
+}
+
+
+/* -----------------------------------Home/Jumbotron------------------------------------------------------ */
+
+.jumbo {
+  background-color: #1A1A12 !important; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: calc(100vh - 76px);
+  border-radius: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+
+.jumbo > div > div {
+  background-color: rgba(28, 28, 18, 0.8) !important; 
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;   
+}
+
+.jumbo img {
+  border-radius: 70% 30% 30% 70% / 43% 50% 50% 57% ;
+  width: 280px;
+  height: auto;
+}
+
+.jumbo a {
+  text-decoration: none;
+}
+
+/* -----------------------------------Home/Skills------------------------------------------------------ */
+#skills > h2 {
+  padding-bottom: 30px;
+}
+
+#skills > div > div {
+ font-size: 1.5rem;
+}
+
+.skills-box {
+  border: 4px solid var(--main-color);
+  border-radius: 5px;
+}
+
+/* -----------------------------------Scroll Buttons------------------------------------------------------ */
+
+#scroll-to-top {
+  margin: 20px;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#scroll-to-top:hover {
+  transform: scale(1.3);
+}
+
+/* -----------------------------------Projects/ProjectGallery------------------------------------------------------ */
+
+.card {
+  border: 1px solid  #1A1A12 !important;
+}
+
+.card img {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.card a:hover {
+  box-shadow: 15px 5px 15px var(--main-color-shadow);
+}
+
+.card p, .card h5 {
+  color: black;
+}
+
+.card-body {
+  background-color:  rgba(198, 129, 243, 0.4)
+}
+
+
+/* -----------------------------------Contact------------------------------------------------------ */
+
+#contact-details {
+  border: 4px solid var(--main-color);
+  border-radius: 5px;
+  background-color: #1A1A12 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-details div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-details a {
+  text-decoration: none;
+}
+
+#contact-details a:hover {
+  text-decoration: underline;
+}
+
+#contact-details svg {
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+  font-size: 25px;
+}
+
+#contact-details svg:hover {
+  transform: scale(1.3);
+  color: #c57ff3 !important; /*(this is over written by * { color: white;}) -- I dont't know how to override it*/
+}
+
+.font-color {
+  color: var(--main-color) ;
+}
+
+
+/* -----------------------------------Footer------------------------------------------------------ */
+
+footer {
+  background-color:  var(--main-color);
+  height: 72px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+footer svg {
+  margin: 20px;
+  justify-content: center;
+  font-size: 30px;
+}
+
+footer svg:hover {
+  transform: scale(1.3);
+  background-image: linear-gradient(to bottom right, var(--main-color) 85%, var(--main-color-shadow) 15%);
+  box-shadow: 15px 15px 15px var(--main-color-shadow);
+}
+
+/* -----------------------------------Media Query------------------------------------------------------ */
+
+@media only screen and (max-width: 576px) {
+  .jumbo {
+      padding: 0px !important;      
+  }
+
+  .jumbo > div > div {
+      min-width: 380px;
+      transform: scale(0.8);
+      text-align: center;
+  }
+
+  .skills-box{
+    margin-bottom: var(--bs-gutter-y);
+  }
+  
+  
+  #skills > h2 {
+      padding-bottom: 40px;
+  }
+
+  #skills-div  {
+    margin-left: 40px !important;
+    margin-right: 40px !important;
+  }
+  
+  .card {
+      margin-bottom: 10px !important;
+  }
+  
+  }
+  
+  @media only screen and (max-width: 992px) and (min-width: 577px){
+      .jumbo > div > div {
+          text-align: center;
+          transform: scale(0.8);
+          margin: 2rem !important;
+      }
+
+      .jumbo {
+        padding-left: 3rem;
+      }
+
+      #skills-div  {
+        margin-left: 40px !important;
+        margin-right: 40px !important;
+      }
+
+      .card {
+        max-width: 572px !important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+  } 
+
+  @media only screen and (max-width: 1299px) and (min-width: 993px){
+    .jumbo > div > div {
+      margin: 3rem !important;
+    }
+
+    .card {
+      min-height: 31rem;
+    }
+  }
+  
+  @media only screen and (min-width: 1300px){
+      .jumbo > div > div {
+          max-width: 1050px;
+          margin: 3rem !important;
+      }
+  }
