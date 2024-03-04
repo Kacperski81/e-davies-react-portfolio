@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 function Contact() {
 
     const sendToast = () => {
-        toast("📧 Teeeeeeeeeeeeeeeesting!", {autoClose: 4000, theme: "dark",})
+        toast("📧 Teeeeeeeeeeeeeeesting!", {autoClose: 4000, theme: "dark",})
     }
 
     /************** Allow user to send a message via the contact form using email.js *******************/
